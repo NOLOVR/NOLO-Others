@@ -1,4 +1,4 @@
-# 使用说明  
+# Instructions   [中文](https://github.com/NOLOVR/NOLO-Others/blob/master/Nolo%20supports%20the%20360%20degree%20dll%20plugin/README_CN.md)  
 1,Replace Nolo_USBHID.dll under the NOLO software installation path using the downloaded support for 360 degrees of Nolo_USBHID.dll.  
 <!--<div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/2.jpg"/></div>-->
 2,The NOLO base station equipment is suspended above the head.  
