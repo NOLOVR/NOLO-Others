@@ -9,4 +9,5 @@
 5, Run the OSVR PC software, click Start, and then the OSVR helmet facing the NOLO base station click OSVR PC software Recenter.
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/16.jpg"/></div>  
 6, Run steamvr.
+
 #
