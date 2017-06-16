@@ -1,0 +1,22 @@
+{
+   "driver_osvr" : {
+      "cameraFOVBottomDegrees" : 27.950000762939453,
+      "cameraFOVLeftDegrees" : 35.235000610351563,
+      "cameraFOVRightDegrees" : 35.235000610351563,
+      "cameraFOVTopDegrees" : 27.950000762939453,
+      "cameraPath" : "/ org_osvr_filter_videoimufusion / HeadFusion / semantic / camera",
+      "displayName" : "OSVR",
+      "manufacturer" : "OSVR",
+      "maxTrackingRangeMeters" : 1.5,
+      "minTrackingRangeMeters" : 0.15000000596046448,
+      "modelNumber" : "OSVR HDK 1.4",
+      "scanoutOrigin" : "lower-right",
+      "serialNumber" : "OSVR HDK 1.4",
+      "serverTimeout" : 5,
+      "verbose" : false
+   },
+   "steamvr" : {
+      "activateMultipleDrivers" : false,
+      "mirrorViewGeometry" : "354 236 1043 360"
+   }
+}
