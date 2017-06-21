@@ -1,10 +1,5 @@
 {
    "driver_osvr" : {
-      "cameraFOVBottomDegrees" : 27.950000762939453,
-      "cameraFOVLeftDegrees" : 35.235000610351563,
-      "cameraFOVRightDegrees" : 35.235000610351563,
-      "cameraFOVTopDegrees" : 27.950000762939453,
-      "cameraPath" : "/ org_osvr_filter_videoimufusion / HeadFusion / semantic / camera",
       "displayName" : "OSVR",
       "manufacturer" : "OSVR",
       "maxTrackingRangeMeters" : 1.5,
