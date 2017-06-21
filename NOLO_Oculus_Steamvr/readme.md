@@ -9,7 +9,7 @@
 8, connect Oculus to PC.  
 9, turn off all Oculus driver service software.  
 10, connect the NOLO device to the PC.  
-11, running NOLO.  
+11, run NOLO.  
 12, run OSVR Server.  
 13, run Steamvr.  
 #
