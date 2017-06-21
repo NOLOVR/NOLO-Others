@@ -1,12 +1,8 @@
 {
    "driver_osvr" : {
-      "displayName" : "OSVR",
-      "manufacturer" : "OSVR",
-      "maxTrackingRangeMeters" : 1.5,
+	  "maxTrackingRangeMeters" : 1.5,
       "minTrackingRangeMeters" : 0.15000000596046448,
-      "modelNumber" : "OSVR HDK 1.4",
       "scanoutOrigin" : "lower-right",
-      "serialNumber" : "OSVR HDK 1.4",
       "serverTimeout" : 5,
       "verbose" : false
    },
