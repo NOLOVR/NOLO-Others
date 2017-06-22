@@ -1,6 +1,6 @@
 #
-1,安装steam和steamvr软件.  
-2,安装[HDK Windows Installer](https://www.reddit.com/r/OSVR/comments/67hqrf/hdk_windows_installer_beta_080_released/)软件.  
+1,安装steam和steamvr软件. (http://store.steampowered.com/about/)   
+2,安装[HDK Windows Installer](http://www.osvr.org/getting-started.html)软件.  
 3,安装[Nolo_driver_for_windows_setup.msi](https://github.com/NOLOVR/NOLO-Driver-For-Windows/tree/master/NOLOVR).  
 4,复制OSVR-Oculus文件夹中的所有Json文件到OSVR-Core/bin文件夹中.  
 5,复制OSVR-Oculus文件夹中的je_nourish_openhmd.dll文件到OSVR-Core/bin/osvr-plugins-0文件夹中.  
