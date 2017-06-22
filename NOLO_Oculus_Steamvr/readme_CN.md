@@ -10,6 +10,7 @@
 9,关闭所有Oculus驱动服务软件.  
 10,连接NOLO设备到PC电脑.     
 11,运行NOLO.  
-12,运行OSVR Server.  
-13,运行Steamvr.
+12,运行OSVR-Core/bin文件夹中的osvr_server.exe.  
+13,运行Steamvr.  
+14,将Oculus设备对准NOLO基站设备,运行OSVR-Core/bin文件夹中的osvr_reset_yaw.exe.
 #
