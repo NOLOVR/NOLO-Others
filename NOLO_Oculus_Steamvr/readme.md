@@ -1,6 +1,6 @@
 #
 1. Install steam and steamvr software.(http://store.steampowered.com/about/)  
-2. Install the [HDK Windows Installer] software. (http://www.osvr.org/getting-started.html)  
+2. Install the [HDK Windows Installer](http://www.osvr.org/getting-started.html) software.   
 3. Install [Nolo_driver_for_windows_setup.msi](https://github.com/NOLOVR/NOLO-Driver-For-Windows/tree/master/NOLOVR).  
 4. Download [NOLO_Oculus_Steamvr](https://github.com/NOLOVR/NOLO-Others) folder.
 5. Copy all the Json files from the OSVR-Oculus folder to the OSVR-Core/bin folder.  
