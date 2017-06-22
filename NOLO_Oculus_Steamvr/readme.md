@@ -10,7 +10,7 @@
 9, turn off all Oculus driver service software.  
 10, connect the NOLO device to the PC.  
 11, run NOLO.  
-12. Run osvr_server.exe in the OSVR-Core / bin folder. 
-13, run Steamvr.  
+12. Run osvr_server.exe in the OSVR-Core / bin folder.   
+13, run Steamvr.      
 14, the Oculus device looked at the NOLO base station equipment, run OSVR-Core / bin folder osvr_reset_yaw.exe.
 #
