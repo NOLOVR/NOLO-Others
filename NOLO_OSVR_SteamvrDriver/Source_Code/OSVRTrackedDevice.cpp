@@ -63,7 +63,6 @@
 
 bool OSVRTrackedDevice::flag_connect = true;
 bool OSVRTrackedDevice::flag_close = false;
-bool OSVRTrackedDevice::flag_preDwon = false;
 NoloData OSVRTrackedDevice::noloData;
 bool OSVRTrackedDevice::flag_rotQ=false;
 Vector3 OSVRTrackedDevice::posR {0,0,0};

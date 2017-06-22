@@ -163,15 +163,18 @@ void ServerDriver_OSVR::UpdateNoloExpandData()
 			memcpy(&OSVRTrackedDevice::noloData, &tempData, sizeof(OSVRTrackedDevice::noloData));
 		}
 		
-		if (OSVRTrackedDevice::noloData.expandData[0]==1) {
-			OSVRTrackedDevice::flag_preDwon = true;
-		}
-		if (OSVRTrackedDevice::flag_preDwon && (OSVRTrackedDevice::noloData.expandData[0] & 1)==0) {
+		if (OSVRTrackedDevice::noloData.expandData[1]>0) {
 
-			OSVRTrackedDevice::flag_preDwon = false;
-			OSVRTrackedDevice::posR = OSVRTrackedDevice::noloData.hmdData.HMDPosition;
-			OSVRTrackedDevice::flag_rotQ = !OSVRTrackedDevice::flag_rotQ;
-			//OSVR_LOG(info) << "============x:" << OSVRTrackedDevice:: posR.x << "    Y:" << OSVRTrackedDevice::posR.y << "   Z:" << OSVRTrackedDevice::posR.z << "  =====================\n";
+			if (OSVRTrackedDevice::flag_rotQ==false) {
+				OSVRTrackedDevice::posR = OSVRTrackedDevice::noloData.hmdData.HMDPosition;
+				OSVRTrackedDevice::flag_rotQ == true;
+			}
+		}
+		else
+		{
+			if (OSVRTrackedDevice::flag_rotQ) {
+				OSVRTrackedDevice::flag_rotQ == false;
+			}
 		}
 	}
 }

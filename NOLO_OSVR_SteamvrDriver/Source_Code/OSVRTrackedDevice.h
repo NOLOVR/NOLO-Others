@@ -62,7 +62,6 @@ public:
 	static NoloData noloData;
 	static bool flag_connect;
 	static bool flag_close;
-	static bool flag_preDwon;
 	static bool flag_rotQ;
 	static Vector3 posR;
 	static Quaternion rotQ;
