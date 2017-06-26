@@ -15,7 +15,7 @@
 
 9, Run steamvr.  
 
-10,If error 400 occurs on Steam VR, please copy the “steamvr.vrsettings” file in the NOLO_OSVR_SteamvrDriver folder to “X: \Steam\config”.
+10,If compositor problem occurs on Steam VR, please copy the “steamvr.vrsettings” file in the NOLO_OSVR_SteamvrDriver folder to “X: \Steam\config”.
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/17.jpg"/></div>  
 11.Place the headset horizontally on a flat surface within the tracking area, then press the pair button on the headset marker to complete the Steam VR Room Setup.  
 
