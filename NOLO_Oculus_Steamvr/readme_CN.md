@@ -12,5 +12,7 @@
 11,运行NOLO.  
 12,运行OSVR-Core/bin文件夹中的osvr_server.exe.  
 13,运行Steamvr.  
-14,将Oculus设备对准NOLO基站设备,运行OSVR-Core/bin文件夹中的osvr_reset_yaw.exe.
+14,将Oculus设备对准NOLO基站设备,运行OSVR-Core/bin文件夹中的osvr_reset_yaw.exe.  
+
+[视频教程](https://www.youtube.com/watch?v=qgL7NHixIX8)
 #

@@ -13,4 +13,7 @@
 12. Run NOLO Driver.  
 13. Run OSVR Server.  
 14. Run Steamvr.  
+
+
+[Video tutorial](https://www.youtube.com/watch?v=qgL7NHixIX8)  
 #
