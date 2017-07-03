@@ -55,9 +55,6 @@ public:
 	//=============xiaoyang code==========
 	static void connect_Nolo();
 	static void disconnect_Nolo();
-
-	void UpdateNoloExpandData();
-	bool flag_Update;
 	//=============xiaoyang code=========
 
     /**

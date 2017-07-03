@@ -59,7 +59,6 @@ class OSVRTrackedDevice : public vr::ITrackedDeviceServerDriver, public vr::IVRD
 	friend class ServerDriver_OSVR;
 public:
 	//xiaoyang code=============================================================
-	static NoloData noloData;
 	static bool flag_connect;
 	static bool flag_close;
 	static bool flag_rotQ;

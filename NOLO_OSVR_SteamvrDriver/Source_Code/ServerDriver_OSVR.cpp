@@ -59,10 +59,6 @@ vr::EVRInitError ServerDriver_OSVR::Init(vr::IDriverLog* driver_log, vr::IServer
 	//=================================晓阳代码===============================
 	disConnect_FunCallBack(disconnect_Nolo);
 	connectSuccess_FunCallBack(connect_Nolo);
-	
-	flag_Update = true;
-	std::thread ta(&ServerDriver_OSVR::UpdateNoloExpandData, this);
-	ta.detach();
 	open_Nolo_ZeroMQ();
 	//========================================================================
 
@@ -152,32 +148,6 @@ void ServerDriver_OSVR::disconnect_Nolo()
 	OSVRTrackedDevice::flag_close = true;
 }
 
-void ServerDriver_OSVR::UpdateNoloExpandData()
-{
-
-	while (flag_Update)
-	{
-	
-		NoloData tempData = get_Nolo_NoloData();
-		if (tempData.hmdData.state) {
-			memcpy(&OSVRTrackedDevice::noloData, &tempData, sizeof(OSVRTrackedDevice::noloData));
-		}
-		
-		if (OSVRTrackedDevice::noloData.expandData[1]>0) {
-
-			if (OSVRTrackedDevice::flag_rotQ==false) {
-				OSVRTrackedDevice::posR = OSVRTrackedDevice::noloData.hmdData.HMDPosition;
-				OSVRTrackedDevice::flag_rotQ == true;
-			}
-		}
-		else
-		{
-			if (OSVRTrackedDevice::flag_rotQ) {
-				OSVRTrackedDevice::flag_rotQ == false;
-			}
-		}
-	}
-}
 
 std::string ServerDriver_OSVR::getDeviceId(vr::ITrackedDeviceServerDriver* device)
 {

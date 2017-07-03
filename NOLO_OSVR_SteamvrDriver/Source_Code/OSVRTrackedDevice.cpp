@@ -63,7 +63,6 @@
 
 bool OSVRTrackedDevice::flag_connect = true;
 bool OSVRTrackedDevice::flag_close = false;
-NoloData OSVRTrackedDevice::noloData;
 bool OSVRTrackedDevice::flag_rotQ=false;
 Vector3 OSVRTrackedDevice::posR {0,0,0};
 Quaternion OSVRTrackedDevice::rotQ{ 0,1,0,0 };
@@ -80,7 +79,6 @@ OSVRTrackedDevice::OSVRTrackedDevice(osvr::clientkit::ClientContext& context, vr
         Logging::instance().setDriverLog(driver_log);
     }
 	//=================xiaoyang code================
-	memset(&noloData,0,sizeof(noloData));
 	memset(&posR,0,sizeof(posR));
 	rotQ.w = 0; rotQ.x = 0; rotQ.y = 1; rotQ.z = 0;
 	//=========================================
@@ -871,8 +869,7 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 {
 	std::recursive_mutex m_Mutex;
 	std::lock_guard<std::recursive_mutex> lock(m_Mutex);
-	NoloData noloDatas;
-	memcpy(&noloDatas, &noloData,sizeof(noloDatas));
+
     if (!userdata)
         return;
 
@@ -893,6 +890,23 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 	
 	if (flag_connect) {
 
+		HMD noloHMD = get_Nolo_HMDData();
+		BYTE * expandData = get_Nolo_ExpandData();
+		if (((int)expandData[1])>0) {      //==============================================DoubleClickMenu turn 180
+
+			if (flag_rotQ == false) {
+				posR = noloHMD.HMDPosition;
+				flag_rotQ = true;
+				OSVR_LOG(info) << "=====================Trun 180===========================\n";
+			}
+		}
+		else
+		{
+			if (flag_rotQ) {
+				flag_rotQ = false;
+			}
+		}
+
 		if (flag_rotQ)
 		{
 			//OSVR_LOG(info) << "============x:" << OSVRTrackedDevice::posR.x << "    Y:" << OSVRTrackedDevice::posR.y << "   Z:" << OSVRTrackedDevice::posR.z << "  =====================\n";
@@ -903,13 +917,13 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 			hmdR.z = report->pose.rotation.data[3];
 			hmdR = rotQ*hmdR;
 
-			noloDatas.hmdData.HMDPosition.z = 2*posR.z - noloDatas.hmdData.HMDPosition.z;
-			noloDatas.hmdData.HMDPosition.x = 2 * posR.x - noloDatas.hmdData.HMDPosition.x;
+			noloHMD.HMDPosition.z = 2*posR.z - noloHMD.HMDPosition.z;
+			noloHMD.HMDPosition.x = 2 * posR.x - noloHMD.HMDPosition.x;
 
 
-			pose.vecPosition[0] = noloDatas.hmdData.HMDPosition.x;
-			pose.vecPosition[1] = noloDatas.hmdData.HMDPosition.y;
-			pose.vecPosition[2] = -noloDatas.hmdData.HMDPosition.z;
+			pose.vecPosition[0] = noloHMD.HMDPosition.x;
+			pose.vecPosition[1] = noloHMD.HMDPosition.y;
+			pose.vecPosition[2] = -noloHMD.HMDPosition.z;
 
 			pose.qRotation.w = hmdR.w;
 			pose.qRotation.x = hmdR.x;
@@ -919,9 +933,9 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 		else
 		{
 			OSVR_Vec3 position;
-			position.data[0] = noloDatas.hmdData.HMDPosition.x;
-			position.data[1] = noloDatas.hmdData.HMDPosition.y;
-			position.data[2] = -noloDatas.hmdData.HMDPosition.z;
+			position.data[0] = noloHMD.HMDPosition.x;
+			position.data[1] = noloHMD.HMDPosition.y;
+			position.data[2] = -noloHMD.HMDPosition.z;
 
 			Eigen::Vector3d::Map(pose.vecPosition) = osvr::util::vecMap(position);
 			map(pose.qRotation) = osvr::util::fromQuat(report->pose.rotation);
