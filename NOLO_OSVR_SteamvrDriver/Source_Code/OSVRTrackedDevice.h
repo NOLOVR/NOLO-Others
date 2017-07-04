@@ -62,6 +62,12 @@ public:
 	static bool flag_connect;
 	static bool flag_close;
 	static bool flag_rotQ;
+
+	static float tz ;
+	static float tx ;
+	static float pz ;
+	static float px ;
+
 	static Vector3 posR;
 	static Quaternion rotQ;
 	//=====================================================================
