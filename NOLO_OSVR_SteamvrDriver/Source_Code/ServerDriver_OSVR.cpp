@@ -72,7 +72,6 @@ void ServerDriver_OSVR::Cleanup()
 
     trackedDevices_.clear();
     context_.reset();
-	flag_Update = false;
 	close_Nolo_ZeroMQ();
 }
 

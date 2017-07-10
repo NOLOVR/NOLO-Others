@@ -66,11 +66,6 @@ bool OSVRTrackedDevice::flag_close = false;
 bool OSVRTrackedDevice::flag_rotQ=false;
 Vector3 OSVRTrackedDevice::posR {0,0,0};
 Quaternion OSVRTrackedDevice::rotQ{ 0,1,0,0 };
- float OSVRTrackedDevice::tz = 0;
- float OSVRTrackedDevice::tx = 0;
- float OSVRTrackedDevice::pz = 0;
- float OSVRTrackedDevice::px = 0;
-
 //=========================================
 OSVRTrackedDevice::OSVRTrackedDevice(osvr::clientkit::ClientContext& context, vr::IServerDriverHost* driver_host, vr::IDriverLog* driver_log) : context_(context), driverHost_(driver_host), pose_(), deviceClass_(vr::TrackedDeviceClass_HMD)
 {
@@ -899,10 +894,6 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 
 			if (flag_rotQ == false) {
 				posR = noloHMD.HMDPosition;
-
-				posR.z = (posR.z + tz + (noloHMD.HMDPosition.z - pz)) / 2.0f;
-				posR.x = (posR.x + tx + (noloHMD.HMDPosition.x - px)) / 2.0f;
-
 				flag_rotQ = true;
 				OSVR_LOG(info) << "=====================Trun 180===========================\n";
 			}
@@ -910,12 +901,6 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 		else
 		{
 			if (flag_rotQ) {
-
-				tz = 2 * posR.z - noloHMD.HMDPosition.z;
-				tx = 2 * posR.x - noloHMD.HMDPosition.x;
-
-				pz = noloHMD.HMDPosition.z;
-				px = noloHMD.HMDPosition.x;
 				flag_rotQ = false;
 			}
 		}
@@ -946,9 +931,6 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 		else
 		{
 			
-			noloHMD.HMDPosition.z = tz + (noloHMD.HMDPosition.z - pz);
-			noloHMD.HMDPosition.x = tx + (noloHMD.HMDPosition.x - px);
-		
 			OSVR_Vec3 position;
 			position.data[0] = noloHMD.HMDPosition.x;
 			position.data[1] = noloHMD.HMDPosition.y;
@@ -957,6 +939,8 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
 			Eigen::Vector3d::Map(pose.vecPosition) = osvr::util::vecMap(position);
 			map(pose.qRotation) = osvr::util::fromQuat(report->pose.rotation);
 		}
+
+		pose.poseIsValid = noloHMD.state;
 	}
 	else
 	{
@@ -984,7 +968,7 @@ void OSVRTrackedDevice::HmdTrackerCallback(void* userdata, const OSVR_TimeValue*
     Eigen::Vector3d::Map(pose.vecAngularAcceleration) = Eigen::Vector3d::Zero();
 
     pose.result = vr::TrackingResult_Running_OK;
-    pose.poseIsValid =true;
+    //pose.poseIsValid =true;
     pose.willDriftInYaw = true;
     pose.shouldApplyHeadModel = false;
 	pose.deviceIsConnected = true;
