@@ -142,6 +142,7 @@ namespace NOLO {
 	  DoubleClickSystem
     }ExpandMsgType;
 	
+	typedef void(__cdecl * noloData_FuncCallBackNotify)(NoloData _noloData);
 	typedef void(__cdecl *funcCallBack)();
 	typedef void(__cdecl *expandMsg_FuncCallBack)(ExpandMsgType expandMsgType);
 	///搜索NOLO设备
@@ -177,5 +178,9 @@ namespace NOLO {
 	NOLO_API  bool _cdecl expandDataNotify_FuncCallBack(expandMsg_FuncCallBack fun);
 	//
 	NOLO_API  Vector3 _cdecl get_Nolo_BaseStionPosition();
+	
+	///Callback function which is called whenever new data has been received
+	///I will call back when I receive the data from the NOLO software,Returns the function registration status
+	NOLO_API  bool _cdecl noloDataNotify_FuncCallBack(noloData_FuncCallBackNotify fun);
 }
-#endif // _NOLO_PIMAX_API_H_
+#endif // _NOLO_API_Version2_H_
