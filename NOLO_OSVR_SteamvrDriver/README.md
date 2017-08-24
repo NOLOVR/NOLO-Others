@@ -2,7 +2,7 @@
 1,Install Steam & Steam VR.  
 2,Install OSVR HDK Windows Installer.  
 3,Install NOLO Driver for Windows setup.  
-4,Please back up all the .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, if restoration is needed. ( If you haven't backed up the original .dll files, you can download them at ) Then Copy the .dll plugin in the NOLO_OSVR_SteamvrDriver folder to ''C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64''.  
+4,Please back up all the .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, if restoration is needed. ( If you haven't backed up the original .dll files, you can download them at https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip ) Then Copy the .dll plugin in the NOLO_OSVR_SteamvrDriver folder to ''C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64''.  
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/15.jpg"/></div>
 5,If you have installed riftcat software, please follow the steps below.
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/14.jpg"/></div>  

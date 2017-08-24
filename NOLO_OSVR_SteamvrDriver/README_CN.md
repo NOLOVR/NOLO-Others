@@ -2,7 +2,7 @@
 1,安装steam和steamvr软件.
 2,安装HDK Windows Installer软件.  
 3,安装NOLO Driver for Windows软件.
-4,将下载的NOLO_OSVR_SteamvrDriver文件夹里的dll插件复制到''C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64''文件夹中,并备份原有的dll以便之后还原使用,如果没有备份从下载.  
+4,将下载的NOLO_OSVR_SteamvrDriver文件夹里的dll插件复制到''C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64''文件夹中,并备份原有的dll以便之后还原使用,如果没有备份从https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip下载.  
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/15.jpg"/></div>
 5,如果安装了riftcat软件的用户请按下图操作.
 <div><img width=400 heigh=200 src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/14.jpg"/></div>
