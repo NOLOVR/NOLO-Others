@@ -1,4 +1,4 @@
-#
+# Instructions
 1. Install steam and steamvr software.(http://store.steampowered.com/about/)  
 2. Install the [HDK Windows Installer](http://www.osvr.org/getting-started.html) software.   
 3. Install [Nolo_driver_for_windows_setup.msi](https://github.com/NOLOVR/NOLO-Driver-For-Windows/tree/master/NOLOVR).  
@@ -13,7 +13,6 @@
 12. Run NOLO Driver.  
 13. Run OSVR Server.  
 14. Run Steamvr.  
-
 
 [Video tutorial](https://www.youtube.com/watch?v=qgL7NHixIX8)  
 #
