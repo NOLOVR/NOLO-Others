@@ -6,7 +6,7 @@
 
 3. Install [NOLO-Driver-For-Windows](https://github.com/NOLOVR/NOLO-Driver-For-Windows).
 
-4. Please back up all .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, in case restoration is needed. (If you did not back up the original .dll files, you can download them [here](https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip).
+4. Please back up all .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, in case restoration is needed. (If you did not back up the original .dll files, you can download them [here](https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip).)
 Then copy all .dll files from [NOLO_OSVR_SteamvrDriver](https://github.com/NOLOVR/NOLO-Others/tree/master/NOLO_OSVR_SteamvrDriver) folder to "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64".  
     <div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/15.jpg"/></div>
 
