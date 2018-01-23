@@ -1,33 +1,39 @@
 # Instructions  [中文](https://github.com/NOLOVR/NOLO-Others/blob/master/NOLO_OSVR_SteamvrDriver/README_CN.md)
-1,Install Steam & Steam VR.  
-2,Install OSVR HDK Windows Installer.  
-3,Install NOLO Driver for Windows setup.  
-4,Please back up all the .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, if restoration is needed. ( If you haven't backed up the original .dll files, you can download them at https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip ) Then Copy the .dll plugin in the NOLO_OSVR_SteamvrDriver folder to ''C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64''.  
-<div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/15.jpg"/></div>
-5,If you have installed riftcat software, please follow the steps below.
-<div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/14.jpg"/></div>  
-6,Run the NOLO Driver for Windows and Turn on the base station by pressing the power button, then connect the NOLO headset marker to the PC.  
+## Setup
+1. Install [Steam & SteamVR](http://store.steampowered.com/). 
 
-7,Connect the OSVR HDK2 to the PC.  
+2. Install [OSVR HDK Windows Installer](http://www.osvr.org/getting-started.html).  
 
-8,Run the OSVR Server and click start. Place the OSVR HDK2 facing the NOLO base station directly, then click Recenter on OSVR Server.
-<div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/16.jpg"/></div>  
+3. Install [NOLO-Driver-For-Windows](https://github.com/NOLOVR/NOLO-Driver-For-Windows).
 
-9, Run steamvr.  
+4. Please back up all .dll files in "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64'' for later use, in case restoration is needed. (If you did not back up the original .dll files, you can download them [here](https://github.com/NOLOVR/NOLO-Others/raw/master/Windows-SDK-Others/OSVR-SteamVR/OSVR-SteamVR.zip).
+Then copy all .dll files from [NOLO_OSVR_SteamvrDriver](https://github.com/NOLOVR/NOLO-Others/tree/master/NOLO_OSVR_SteamvrDriver) folder to "C:\Program Files\HDK-Software-Suite\OSVR-SteamVR\osvr\bin\win64".  
+    <div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/15.jpg"/></div>
 
-10,If compositor problem occurs on Steam VR, please copy the “steamvr.vrsettings” file in the NOLO_OSVR_SteamvrDriver folder to “X: \Steam\config”.
-<div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/17.jpg"/></div>  
-11.Place the headset marker horizontally on ground, then press the pair button on it to complete the Room Setup. If you want to use the Steam VR built-in Room Setup, please place the headset marker horizontally on ground and make it straightly face to the base station at 1.5m away, and then to complete the Room Setup.  
+5. If you have Riftcat software installed, please follow the steps shown in the image below.
+    <div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/14.jpg"/></div>  
 
-12.Double click the system button on any controller to calibrate the orientation. Double click the menu button to implement the function of Turn-around by one-click.
+6. Run NOLO Driver for Windows and Turn on the base station by pressing the power button, then connect the NOLO headset marker to the PC (via USB).  
 
-13.Choose a Steam VR game on PC and enjoy NOLO.
+7. Connect OSVR HDK2 to PC.  
 
-Steam: [http://store.steampowered.com/](http://store.steampowered.com/)
+8. Run OSVR Server and click start. Place OSVR HDK2 facing towards NOLO base station, then click "Recenter" on OSVR Server.
+    <div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/16.jpg"/></div>  
 
-OSVR HDK Windows Installer: [http://www.osvr.org/getting-started.html](http://www.osvr.org/getting-started.html)
+9. Run steamvr.  
 
-NOLO_OSVR_SteamvrDriver: [https://github.com/NOLOVR/NOLO-Others/tree/master/NOLO_OSVR_SteamvrDriver](https://github.com/NOLOVR/NOLO-Others/tree/master/NOLO_OSVR_SteamvrDriver)
+10. If error occurs on Steam VR, please copy the “steamvr.vrsettings” file from "NOLO_OSVR_SteamvrDriver" folder to "X: \Steam\config".
+    <div><img src="https://github.com/NOLOVR/NOLO-Others/blob/master/Windows-SDK-Others/picture/17.jpg"/></div> 
 
-NOLO-Driver-For-Windows: [https://github.com/NOLOVR/NOLO-Driver-For-Windows](https://github.com/NOLOVR/NOLO-Driver-For-Windows)
+11. Place the headset marker horizontally on the ground, then press the pair button on it to complete Room Setup. If you want to use Steam VR built-in Room Setup instead, please place the headset marker horizontally on the ground, facing towards the base station at a distance of 1.5m, and then to complete the Room Setup.  
+
+12. Double click the power/system button on either controller to calibrate the controllers' orientation (Controllers must point towards the base station at this step). Double click the menu button on it to make a 180 degree turn in the virtual world.
+
+13. Choose a SteamVR game on PC and enjoy NOLO.
+#
+## All Downloads
+- [Steam & SteamVR](http://store.steampowered.com/)
+- [OSVR HDK Windows Installer](http://www.osvr.org/getting-started.html)
+- [NOLO_OSVR_SteamvrDriver](https://github.com/NOLOVR/NOLO-Others/tree/master/NOLO_OSVR_SteamvrDriver)
+- [NOLO-Driver-For-Windows](https://github.com/NOLOVR/NOLO-Driver-For-Windows)
 #
